@@ -1,22 +1,12 @@
 #include <stdio.h>
-void printNumbers(int i) {
-    if (i == 0)
-        return;
-    printNumbers(i - 1);
-    printf("%d ", i);
-}
-
-void printPattern(int n) {
-    if (n == 0)
-        return;
-    printPattern(n - 1);
-    printNumbers(n);
-    printf("\n");
-}
 
 int main() {
-    int n = 4; 
-    printPattern(n); 
+    int n = 4;
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
     return 0;
 }
-
